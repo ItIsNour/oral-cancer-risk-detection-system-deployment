@@ -1,0 +1,348 @@
+
+.employee-dashboard .option {
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-self: center;
+  color: white;
+  font-size: medium;
+}
+
+.employee-dashboard .content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  min-height: calc(100vh - 160px);
+}
+
+.employee-dashboard .column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.employee-dashboard .title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .employee-dashboard .section {
+  background-color: #f2e4fd;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 95%;
+} */
+
+.employee-dashboard .section {
+  position: relative; /* Ensure relative positioning for absolute child */
+  background-color: #f2e4fd;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 95%;
+}
+
+.employee-dashboard .section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.employee-dashboard .add-btn {
+  background-color: #a46ede;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.employee-dashboard .filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.employee-dashboard .filter-left-container {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.employee-dashboard .filter-input {
+  width: 100%;
+}
+
+.employee-dashboard .filter-select {
+  width: 60%;
+}
+
+.employee-dashboard .filter-input,
+.employee-dashboard .filter-select {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.employee-dashboard .section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.employee-dashboard .patient-list,
+.employee-dashboard .doctor-list {
+  list-style-type: none;
+}
+
+.employee-dashboard .patient-list li,
+.employee-dashboard .doctor-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.employee-dashboard .item {
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  border-color: #a46ede;
+  border-width: 2px;
+}
+
+.employee-dashboard .actions {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  right: 0;
+}
+
+.employee-dashboard .details {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.employee-dashboard .add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a46ede;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.employee-dashboard .add-btn:hover {
+  background-color: blueviolet;
+}
+
+.employee-dashboard .add-btn .add-icon {
+  font-size: 25px;
+}
+
+.employee-dashboard .doctor-list-container,
+.employee-dashboard .patient-list-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.register-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.register-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #a46ede;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: blueviolet;
+}
+
+.employee-dashboard .view-visits-btn {
+  position: absolute;
+  bottom: 10px; /* Adjusted bottom position */
+  right: 10px; /* Adjusted right position */
+  background-color: #a46ede;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1; /* Ensure it stays above content */
+  margin-right: 10px;
+}
+
+.employee-dashboard .view-visits-btn:hover {
+  background-color: blueviolet;
+}
+
+
+
+/* Style for the modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 1000; /* Ensure modal appears above other content */
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+/* Style for the modal content */
+.viewVisitsmodal-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Style for the close button */
+.viewVisitsclose-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+}
+
+.close-btn:hover {
+  color: red; /* Change color on hover */
+}
+
+.visits-list-container {
+  max-height: 500px;
+  max-width: 700px;
+  overflow-y: auto;
+}
+
+.visits-list {
+  list-style-type: none;
+  width: 100%;
+}
+
+.visits-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.model-prediction-btn {
+  margin-top: 10px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .employee-dashboard .content {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .employee-dashboard .column {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .employee-dashboard .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employee-dashboard .filter-left-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .employee-dashboard .filter-select,
+  .employee-dashboard .filter-input {
+    width: 100%;
+  }
+
+  .employee-dashboard .section {
+    height: auto;
+    padding: 10px;
+  }
+
+  .employee-dashboard .add-btn {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .register-button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .employee-dashboard .view-visits-btn {
+    /* bottom: auto; */
+    left: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+    width: 30%;
+  }
+
+  .visits-list-container {
+    max-width: 100%;
+  }
+
+  
+  .viewVisitsmodal-main {
+    width: 90%;
+    max-width: none;
+  }
+
+  .viewVisitsclose-btn {
+    width: 20%;
+    right: 0px;
+  }
+
+
+  .employee-dashboard .patient-list li .item img,
+  .employee-dashboard .doctor-list li .item img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+}
